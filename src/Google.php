@@ -51,6 +51,22 @@ class Google
      */
     protected function handleResponse($raw){
         $data = json_decode($raw,true);
+
+        if(!empty($data["error"])){
+            $reason = $data["error"]["errors"][0]["reason"];
+            $msg    = $data["error"]["errors"][0]["message"];
+
+            switch ($reason) {
+                case 'keyInvalid':
+                    throw new GoogleAuthException;
+                    break;
+
+                default:
+                    throw new GoogleErrorException("{$reason} {$msg}");
+                    break;
+            }
+        }
+
         return $data;
     }
 

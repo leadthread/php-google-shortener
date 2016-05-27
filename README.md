@@ -10,6 +10,7 @@
 ## Installation
 
 Install via [composer](https://getcomposer.org/) - In the terminal:
+
 ```bash
 composer require zenapply/php-google-shortener
 ```
@@ -17,8 +18,8 @@ composer require zenapply/php-google-shortener
 ## Usage
 ```php
 use Zenapply\GoogleShortener\Google;
-$c = new Google("username","password");
+$c = new Google("token");
 $result = $c->shorten("https://www.google.com/");
 var_dump($result);
-// string(21) "http://bit.ly/1SvUIo8"
+// string(21) "http://goo.gl/1SvUIo8"
 ```
