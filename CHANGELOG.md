@@ -2,6 +2,9 @@
 
 All notable changes to `php-google-shortener` will be documented in this file.
 
+### 1.0.2
+- Fixed provides correct long url
+
 ### 1.0.1
 - Fixed error response
 

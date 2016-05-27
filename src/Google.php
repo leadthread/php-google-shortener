@@ -39,7 +39,7 @@ class Google
 
         $url = $this->fixUrl($url, $encode);
 
-        $data = $this->exec($this->buildRequestUrl($url));
+        $data = $this->exec($url);
             
         return $data['id'];
     }
@@ -62,7 +62,7 @@ class Google
                     break;
 
                 default:
-                    throw new GoogleErrorException("{$reason} {$msg}");
+                    throw new GoogleErrorException("Reason: {$reason}. Message: {$msg}.");
                     break;
             }
         }
@@ -82,7 +82,7 @@ class Google
         }
 
         if($encode){
-            $url = urlencode($url);
+            // Google does not support an encoded url
         }
 
         return $url;
@@ -94,7 +94,7 @@ class Google
      * @param  string $action The API action
      * @return string         The URL
      */
-    protected function buildRequestUrl($url,$action = "url"){
+    protected function buildRequestUrl($action = "url"){
         return "https://{$this->host}/urlshortener/{$this->version}/{$action}?key={$this->token}";
     }
 
@@ -112,14 +112,14 @@ class Google
 
     /**
      * Executes a CURL request to the Google API
-     * @param  string $url    The URL to send to
+     * @param  string $url    The URL to shorten
      * @return mixed          The response data
      */ 
     protected function exec($url)
     {
         $client = $this->getRequest();
         try{
-            $response = $client->request('POST',$url,[
+            $response = $client->request('POST',$this->buildRequestUrl(),[
                 'json' => [
                     'longUrl' => $url
                 ]
