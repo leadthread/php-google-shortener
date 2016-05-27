@@ -126,8 +126,6 @@ class Google
             ]);
         } catch (\GuzzleHttp\Exception\ClientException $e){
             $response = $e->getResponse();
-            var_dump($response->getBody()->getContents());
-            die();
         }
         return $this->handleResponse($response->getBody());
     }
