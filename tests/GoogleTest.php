@@ -19,7 +19,7 @@ class GoogleTest extends TestCase
 
     public function testItBuildsCorrectRequestUrl(){
         $fixture = $this->getBitlyWithMockedHttpRequest('{"status_code":200,"data":{"url":"short.com"}}');
-        $result = $this->invokeMethod($fixture,'buildRequestUrl',['https://google.com','testAction']);
+        $result = $this->invokeMethod($fixture,'buildRequestUrl',['testAction']);
         $this->assertEquals("https://foo.com/urlshortener/v1/testAction?key=token",$result);
     }
 
@@ -33,12 +33,6 @@ class GoogleTest extends TestCase
         $r = new Google("token");
         $result = $this->invokeMethod($r,'fixUrl',['https://google.com',false]);
         $this->assertEquals("https://google.com",$result);
-    }
-
-    public function testItEncodesAUrl(){
-        $r = new Google("token");
-        $result = $this->invokeMethod($r,'fixUrl',['https://google.com',true]);
-        $this->assertEquals("https%3A%2F%2Fgoogle.com",$result);
     }
 
     public function testMethodShorten(){
