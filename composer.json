@@ -1,5 +1,5 @@
 {
-    "name": "zenapply/php-google-shortener",
+    "name": "leadthread/php-google-shortener",
     "description": "Easily shorten URLs in PHP",
     "keywords": [
         "google url shortener",
@@ -7,10 +7,10 @@
         "shorten",
         "url",
         "tylercd100",
-        "zenapply"
+        "leadthread"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/zenapply/php-google-shortener",
+    "homepage": "https://github.com/leadthread/php-google-shortener",
     "minimum-stability": "stable",
     "authors": [
         {
@@ -27,12 +27,12 @@
     },
     "autoload":{
         "psr-4":{
-            "Zenapply\\GoogleShortener\\":"src/"
+            "LeadThread\\GoogleShortener\\":"src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zenapply\\GoogleShortener\\Tests\\": "tests/"
+            "LeadThread\\GoogleShortener\\Tests\\": "tests/"
         }
     },
     "suggest": {

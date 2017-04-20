@@ -1,6 +1,6 @@
 <?php
 
-namespace Zenapply\GoogleShortener\Exceptions;
+namespace LeadThread\GoogleShortener\Exceptions;
 
 abstract class GoogleException extends \Exception
 {

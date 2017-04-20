@@ -1,9 +1,9 @@
 <?php
 
-namespace Zenapply\GoogleShortener\Tests;
+namespace LeadThread\GoogleShortener\Tests;
 
-use Zenapply\GoogleShortener\Google;
-use Zenapply\GoogleShortener\Exceptions\GoogleException;
+use LeadThread\GoogleShortener\Google;
+use LeadThread\GoogleShortener\Exceptions\GoogleException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Exception\ClientException;

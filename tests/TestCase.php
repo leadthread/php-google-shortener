@@ -1,6 +1,6 @@
 <?php
 
-namespace Zenapply\GoogleShortener\Tests;
+namespace LeadThread\GoogleShortener\Tests;
 
 class TestCase extends \PHPUnit_Framework_TestCase
 {

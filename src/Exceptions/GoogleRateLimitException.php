@@ -1,6 +1,6 @@
 <?php
 
-namespace Zenapply\GoogleShortener\Exceptions;
+namespace LeadThread\GoogleShortener\Exceptions;
 
 class GoogleRateLimitException extends GoogleException
 {

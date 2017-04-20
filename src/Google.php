@@ -1,11 +1,11 @@
 <?php
 
-namespace Zenapply\GoogleShortener;
+namespace LeadThread\GoogleShortener;
 
 use Exception;
-use Zenapply\GoogleShortener\Exceptions\GoogleAuthException;
-use Zenapply\GoogleShortener\Exceptions\GoogleErrorException;
-use Zenapply\GoogleShortener\Exceptions\GoogleRateLimitException;
+use LeadThread\GoogleShortener\Exceptions\GoogleAuthException;
+use LeadThread\GoogleShortener\Exceptions\GoogleErrorException;
+use LeadThread\GoogleShortener\Exceptions\GoogleRateLimitException;
 use GuzzleHttp\Client;
 
 class Google
